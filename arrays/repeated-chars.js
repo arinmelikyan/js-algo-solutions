@@ -1,6 +1,6 @@
 function commonChars(names) {
   if (!names.length) {
-    return new Set();
+    return [];
   }
   let chars = new Set(names[0]);
   for (let i = 1; i < names.length; i++) {
