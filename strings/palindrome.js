@@ -1,6 +1,11 @@
+const str1 = 'Do geese see God? ';
+const str2 = 'not a palindrome';
+const str3 = 'Madam';
+
+
 // first way (including phrases)
 const isPalindrome = (str) => {
-    const modifiedStr = str.trim().replace(/[^A-Z0-9]/ig, "");
+    const modifiedStr = str.replace(/[^A-Z0-9]/ig, "");
     let firstCharIndex = 0;
     let lastCharIndex = modifiedStr.length - 1;
 
@@ -19,4 +24,13 @@ const isPalindrome = (str) => {
     return true;
 }
 
-isPalindrome('Do geese see God?');
+isPalindrome(str1); // true
+
+// second way
+const isPalindrome2 = (str) => {
+    const newStr = str.replace(/[^A-Z0-9]/ig, "").toLowerCase().split("").reverse().join("");
+
+    return newStr === str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+}
+
+isPalindrome2(str2); // false
