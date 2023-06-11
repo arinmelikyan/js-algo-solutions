@@ -3,7 +3,7 @@ const str2 = 'not a palindrome';
 const str3 = 'Madam';
 
 
-// first way (including phrases)
+// first way (including phrases) | time complexity - O(n)
 const isPalindrome = (str) => {
     const modifiedStr = str.replace(/[^A-Z0-9]/ig, "");
     let firstCharIndex = 0;
@@ -26,7 +26,7 @@ const isPalindrome = (str) => {
 
 isPalindrome(str1); // true
 
-// second way
+// second way (including phrases) | time complexity - O(n)
 const isPalindrome2 = (str) => {
     const newStr = str.replace(/[^A-Z0-9]/ig, "").toLowerCase().split("").reverse().join("");
 
